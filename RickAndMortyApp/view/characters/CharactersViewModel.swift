@@ -14,7 +14,7 @@ class CharactersViewModel {
     
     var onShowCharacters: (() -> Void)?
     
-    init(api: RickAndMortyAPIProtocol = RickAndMortyAPI()) {
+    init(api: RickAndMortyAPIProtocol) {
         self.api = api
     }
     

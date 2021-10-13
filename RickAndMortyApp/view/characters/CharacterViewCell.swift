@@ -14,7 +14,6 @@ class CharacterViewCell: UITableViewCell {
     private let cover: UIImageView = {
        let _cover = UIImageView()
         _cover.contentMode = .scaleAspectFit
-//        _cover.clipsToBounds = true
         return _cover
     }()
     
