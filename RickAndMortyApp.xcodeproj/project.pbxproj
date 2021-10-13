@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96712F73270E1D7F0029A893 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96712F71270E1D7F0029A893 /* CharacterDetailViewController.swift */; };
+		96712F74270E1D7F0029A893 /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96712F72270E1D7F0029A893 /* CharacterDetailViewController.xib */; };
 		96FC84FB27074E2000E88AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FC84FA27074E2000E88AB0 /* AppDelegate.swift */; };
 		96FC84FD27074E2000E88AB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FC84FC27074E2000E88AB0 /* SceneDelegate.swift */; };
 		96FC84FF27074E2000E88AB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FC84FE27074E2000E88AB0 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		96FC853A2707673A00E88AB0 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FC85392707673A00E88AB0 /* CharactersViewModel.swift */; };
 		96FF0346270B2FDC00E3DFE5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 96FF0345270B2FDC00E3DFE5 /* SDWebImage */; };
 		96FF0348270B308B00E3DFE5 /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FF0347270B308B00E3DFE5 /* CharacterViewCell.swift */; };
+		96FF034B270B458F00E3DFE5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 96FF034A270B458F00E3DFE5 /* Swinject */; };
+		96FF034E270B685100E3DFE5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FF034D270B685100E3DFE5 /* AppContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96712F71270E1D7F0029A893 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		96712F72270E1D7F0029A893 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		96FC84F727074E2000E88AB0 /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FC84FA27074E2000E88AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96FC84FC27074E2000E88AB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 		96FC85372707670B00E88AB0 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		96FC85392707673A00E88AB0 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		96FF0347270B308B00E3DFE5 /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
+		96FF034D270B685100E3DFE5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FF0346270B2FDC00E3DFE5 /* SDWebImage in Frameworks */,
+				96FF034B270B458F00E3DFE5 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96712F6C270E0EED0029A893 /* characterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				96712F71270E1D7F0029A893 /* CharacterDetailViewController.swift */,
+				96712F72270E1D7F0029A893 /* CharacterDetailViewController.xib */,
+			);
+			path = characterDetail;
+			sourceTree = "<group>";
+		};
 		96FC84EE27074E2000E88AB0 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +132,7 @@
 		96FC84F927074E2000E88AB0 /* RickAndMortyApp */ = {
 			isa = PBXGroup;
 			children = (
+				96FF034C270B681800E3DFE5 /* di */,
 				96FC8535270766BE00E88AB0 /* view */,
 				96FC852A2707513C00E88AB0 /* data */,
 				96FC84FA27074E2000E88AB0 /* AppDelegate.swift */,
@@ -175,6 +193,7 @@
 		96FC8535270766BE00E88AB0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				96712F6C270E0EED0029A893 /* characterDetail */,
 				96FC8536270766EA00E88AB0 /* characters */,
 			);
 			path = view;
@@ -188,6 +207,14 @@
 				96FF0347270B308B00E3DFE5 /* CharacterViewCell.swift */,
 			);
 			path = characters;
+			sourceTree = "<group>";
+		};
+		96FF034C270B681800E3DFE5 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				96FF034D270B685100E3DFE5 /* AppContainer.swift */,
+			);
+			path = di;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +235,7 @@
 			name = RickAndMortyApp;
 			packageProductDependencies = (
 				96FF0345270B2FDC00E3DFE5 /* SDWebImage */,
+				96FF034A270B458F00E3DFE5 /* Swinject */,
 			);
 			productName = RickAndMortyApp;
 			productReference = 96FC84F727074E2000E88AB0 /* RickAndMortyApp.app */;
@@ -283,6 +311,7 @@
 			mainGroup = 96FC84EE27074E2000E88AB0;
 			packageReferences = (
 				96FF0344270B2FDC00E3DFE5 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				96FF0349270B458F00E3DFE5 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 96FC84F827074E2000E88AB0 /* Products */;
 			projectDirPath = "";
@@ -303,6 +332,7 @@
 				96FC850727074E2300E88AB0 /* LaunchScreen.storyboard in Resources */,
 				96FC850427074E2300E88AB0 /* Assets.xcassets in Resources */,
 				96FC850227074E2000E88AB0 /* Main.storyboard in Resources */,
+				96712F74270E1D7F0029A893 /* CharacterDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,11 +358,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FC853A2707673A00E88AB0 /* CharactersViewModel.swift in Sources */,
+				96712F73270E1D7F0029A893 /* CharacterDetailViewController.swift in Sources */,
 				96FC85382707670B00E88AB0 /* CharactersViewController.swift in Sources */,
 				96FC8534270754D500E88AB0 /* RickAndMortyAPI.swift in Sources */,
 				96FC84FF27074E2000E88AB0 /* ViewController.swift in Sources */,
 				96FC84FB27074E2000E88AB0 /* AppDelegate.swift in Sources */,
 				96FC852F2707534B00E88AB0 /* Origin.swift in Sources */,
+				96FF034E270B685100E3DFE5 /* AppContainer.swift in Sources */,
 				96FC852D2707520600E88AB0 /* Character.swift in Sources */,
 				96FC85312707544500E88AB0 /* Location.swift in Sources */,
 				96FF0348270B308B00E3DFE5 /* CharacterViewCell.swift in Sources */,
@@ -704,6 +736,14 @@
 				minimumVersion = 5.9.0;
 			};
 		};
+		96FF0349270B458F00E3DFE5 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -711,6 +751,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 96FF0344270B2FDC00E3DFE5 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		96FF034A270B458F00E3DFE5 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96FF0349270B458F00E3DFE5 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -10,9 +10,7 @@ import UIKit
 
 class CharactersViewController: UIViewController {
     
-    private lazy var viewModel: CharactersViewModel = {
-        return CharactersViewModel()
-    }()
+    private lazy var viewModel: CharactersViewModel = AppContainer.shared.resolve(CharactersViewModel.self)!
     
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -56,6 +54,13 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let character = viewModel.characters[indexPath.row]
+        let controller = AppContainer.shared.resolve(CharacterDetailViewController.self, argument: character.id)
+        self.navigationController?.pushViewController(controller!, animated: true)
     }
     
 }
