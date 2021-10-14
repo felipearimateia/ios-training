@@ -10,9 +10,9 @@ import Foundation
 class CharactersViewModel {
     
     private let api: RickAndMortyAPIProtocol
-    private(set) var characters: [Character] = []
+    private var characters: [Character] = []
     
-    var onShowCharacters: (() -> Void)?
+    var onShowCharacters: (([Character]) -> Void)?
     
     init(api: RickAndMortyAPIProtocol) {
         self.api = api
@@ -21,8 +21,13 @@ class CharactersViewModel {
     func fetchCharacters(page: Int = 1) {
         api.getCharacters(page: page) { [weak self] characters in
             self?.characters.append(contentsOf: characters.results)
-            self?.onShowCharacters?()
+            self?.onShowCharacters?(characters.results)
         }
+    }
+    
+    func filterSpecies(species: String) {
+        let filter = characters.filter{ $0.species == species }
+        self.onShowCharacters?(filter)
     }
     
     

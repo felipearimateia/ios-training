@@ -11,6 +11,7 @@ import UIKit
 class CharactersViewController: UIViewController {
     
     private lazy var viewModel: CharactersViewModel = AppContainer.shared.resolve(CharactersViewModel.self)!
+    private var characters: [Character] = []
     
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -32,8 +33,9 @@ class CharactersViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.onShowCharacters = {
+        viewModel.onShowCharacters = { characters in
             DispatchQueue.main.async {
+                self.characters = characters
                 self.tableView.reloadData()
             }
         }
@@ -43,12 +45,12 @@ class CharactersViewController: UIViewController {
 
 extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.characters.count
+        return self.characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CharacterViewCell.identifier, for: indexPath) as! CharacterViewCell
-        cell.character = viewModel.characters[indexPath.row]
+        cell.character = self.characters[indexPath.row]
         return cell
     }
     
@@ -58,7 +60,7 @@ extension CharactersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let character = viewModel.characters[indexPath.row]
+        let character = self.characters[indexPath.row]
         let controller = AppContainer.shared.resolve(CharacterDetailViewController.self, argument: character.id)
         self.navigationController?.pushViewController(controller!, animated: true)
     }
