@@ -9,14 +9,10 @@ import Foundation
 
 class CharactersViewModel {
     
-    private let api: RickAndMortyAPIProtocol
+    private let api = RickAndMortyAPI()
     private(set) var characters: [Character] = []
     
     var onShowCharacters: (() -> Void)?
-    
-    init(api: RickAndMortyAPIProtocol = RickAndMortyAPI()) {
-        self.api = api
-    }
     
     func fetchCharacters(page: Int = 1) {
         api.getCharacters(page: page) { [weak self] characters in
