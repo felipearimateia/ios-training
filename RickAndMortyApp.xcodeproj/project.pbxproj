@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9600E4B127BEB3A4004EE3C0 /* CharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600E4B027BEB3A4004EE3C0 /* CharactersRepository.swift */; };
+		9600E4B327BEB97E004EE3C0 /* CharactersRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600E4B227BEB97E004EE3C0 /* CharactersRepositoryProtocol.swift */; };
 		960CDB5D271717CC00DB1F31 /* CharactersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CDB5C271717CC00DB1F31 /* CharactersViewModelTests.swift */; };
 		960CDB602717228500DB1F31 /* RickAndMortyAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CDB5F2717228500DB1F31 /* RickAndMortyAPIMock.swift */; };
 		96712F73270E1D7F0029A893 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96712F71270E1D7F0029A893 /* CharacterDetailViewController.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9600E4B027BEB3A4004EE3C0 /* CharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepository.swift; sourceTree = "<group>"; };
+		9600E4B227BEB97E004EE3C0 /* CharactersRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepositoryProtocol.swift; sourceTree = "<group>"; };
 		960CDB5C271717CC00DB1F31 /* CharactersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelTests.swift; sourceTree = "<group>"; };
 		960CDB5F2717228500DB1F31 /* RickAndMortyAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyAPIMock.swift; sourceTree = "<group>"; };
 		96712F71270E1D7F0029A893 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9600E4AF27BEB374004EE3C0 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				9600E4B027BEB3A4004EE3C0 /* CharactersRepository.swift */,
+				9600E4B227BEB97E004EE3C0 /* CharactersRepositoryProtocol.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		960CDB5E271718A100DB1F31 /* mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +159,7 @@
 			children = (
 				96FF034C270B681800E3DFE5 /* di */,
 				96FC8535270766BE00E88AB0 /* view */,
-				96FC852A2707513C00E88AB0 /* data */,
+				96FC852A2707513C00E88AB0 /* model */,
 				96FC84FA27074E2000E88AB0 /* AppDelegate.swift */,
 				96FC84FC27074E2000E88AB0 /* SceneDelegate.swift */,
 				96FC84FE27074E2000E88AB0 /* ViewController.swift */,
@@ -177,13 +190,14 @@
 			path = RickAndMortyAppUITests;
 			sourceTree = "<group>";
 		};
-		96FC852A2707513C00E88AB0 /* data */ = {
+		96FC852A2707513C00E88AB0 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9600E4AF27BEB374004EE3C0 /* repository */,
 				96FC8532270754AF00E88AB0 /* api */,
 				96FC852B270751E500E88AB0 /* response */,
 			);
-			path = data;
+			path = model;
 			sourceTree = "<group>";
 		};
 		96FC852B270751E500E88AB0 /* response */ = {
@@ -376,6 +390,7 @@
 				96FC85382707670B00E88AB0 /* CharactersViewController.swift in Sources */,
 				96FC8534270754D500E88AB0 /* RickAndMortyAPI.swift in Sources */,
 				96FC84FF27074E2000E88AB0 /* ViewController.swift in Sources */,
+				9600E4B327BEB97E004EE3C0 /* CharactersRepositoryProtocol.swift in Sources */,
 				96FC84FB27074E2000E88AB0 /* AppDelegate.swift in Sources */,
 				96FC852F2707534B00E88AB0 /* Origin.swift in Sources */,
 				96FF034E270B685100E3DFE5 /* AppContainer.swift in Sources */,
@@ -383,6 +398,7 @@
 				96FC85312707544500E88AB0 /* Location.swift in Sources */,
 				96FF0348270B308B00E3DFE5 /* CharacterViewCell.swift in Sources */,
 				96FC84FD27074E2000E88AB0 /* SceneDelegate.swift in Sources */,
+				9600E4B127BEB3A4004EE3C0 /* CharactersRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

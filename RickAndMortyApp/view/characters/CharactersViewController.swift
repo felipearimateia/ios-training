@@ -11,6 +11,11 @@ import UIKit
 class CharactersViewController: UIViewController {
     
     private lazy var viewModel: CharactersViewModel = AppContainer.shared.resolve(CharactersViewModel.self)!
+    
+//    private lazy var api: RickAndMortyAPIProtocol = RickAndMortyAPI()
+//    private lazy var reporitory: CharactersRepositoryProtocol = CharactersRepository(api: api)
+//    private lazy var viewModel: CharactersViewModel = CharactersViewModel(repository: reporitory)
+    
     private var characters: [Character] = []
     
     private lazy var tableView: UITableView = {
